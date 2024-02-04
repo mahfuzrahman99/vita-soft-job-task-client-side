@@ -20,8 +20,8 @@ const UpdateUser = ({ u }) => {
   } = useForm();
 
   const [profileImageUrl, setProfileImageUrl] = useState(null);
-  const [birthdate, setBirthdate] = useState(birthdate);
-  const [joining_date, setJoining_date] = useState(joining_date);
+  const [birthdate, setBirthdate] = useState(birthdate || null);
+  const [joining_date, setJoining_date] = useState(joining_date || null);
   //   const { formData, setFormData } = useContext(StateContext);
 
   const { name, profile_picture, phone_number, description, active_status } =
