@@ -11,7 +11,7 @@ import { StateContext } from "@/context/StateProvider";
 
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=7b220630460d3376a065265f6edfd433`;
 
-const UpdateUser = ({ showModal, setShowModal, u }) => {
+const UpdateUser = ({ u }) => {
   const {
     handleSubmit,
     register,
@@ -186,6 +186,7 @@ const UpdateUser = ({ showModal, setShowModal, u }) => {
                   selected={joining_date}
                   onChange={(date) => setJoining_date(date)}
                   dateFormat="MM/dd/yyyy"
+                  
                   className="w-full bg-white p-2 rounded-md mt-1"
                 />
                 {errors.joining_date && (
@@ -220,7 +221,6 @@ const UpdateUser = ({ showModal, setShowModal, u }) => {
                   {...register("profile_picture", {
                     required: "Profile picture is required",
                   })}
-                  defaultValue={profile_picture || ""}
                 />
                 {errors.profile_picture && (
                   <p className="text-red-500">
